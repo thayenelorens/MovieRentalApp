@@ -5,8 +5,10 @@
 package movierentalapp;
 
 /**
- *
- * @author thaye
+ *Group Members:
+ * @author Thayene Lorens - 2020293
+ * @author Mayara Lorens - 2020292
+ * @author Marco Antonio dos Santos - 2020333
  */
 public class MovieRentalApp {
 

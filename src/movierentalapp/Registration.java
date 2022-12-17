@@ -9,27 +9,14 @@ import java.util.Scanner;
 /**
  *
  * @author Marco dos Santos
- */
+ */ //class 
 public class Registration {
     public String Name;
     public String email;
-    public String password;  
-
-   // public Registration(String Name, String email, String password) {
-    //    this.Name = Name;
-     //   this.email = email;
-     //   this.password = password;
-   // }
-
-    @Override
-    public String toString() {
-        return "Registration{" + "Name=" + Name + ", email=" + email + ", password=" + password + '}';
-    }
-    
-    
-
+    public String password; 
+   
     public String getName() {
-        return Name;
+        return this.Name;
     }
 
     public void setName(String Name) {
@@ -45,39 +32,54 @@ public class Registration {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
-    public void setPassword(String password) {
+    public String setPassword(String password) { //validator the password
         this.password = password;
+        if (password.length() < 8 || password.length() > 9) {
+            System.out.println("Sorry, the input was the wrong length,try again");
+        }
+        else {
+            if (password.matches("^[0-9]{7}[A-Z]+$")) {
+                System.out.println("Thank you for entering a valid Password");
+            }
+            else {
+                System.out.println("The Password needs to be 7 numbers followed by 1 or 2 capital letters");
+            }
+            return  password; 
+        }
+        return null;
     }
-    
-   
-    public void printSet(){
        
-        
+    
+   //method to print scanner to set customer data
+    public void printSet(){
+          
      try(Scanner scanner = new Scanner(System.in)){
-        System.out.println("Register your Name:");
+        System.out.print("Register your Name :");
         String name = scanner.nextLine();
-        this.setEmail( Name);
+        this.setName(name);
         
         
-         System.out.println("Register your Email");
-         String newemail = scanner.nextLine();
-         this.setEmail(email);
+         System.out.print("Register your Email :");
+         String newEmail = scanner.nextLine();
+         this.setEmail(newEmail);
          
          
-         System.out.println("Register your password");
+         System.out.print("Register your password, your password must have 7 numbers and 1 or 2 Capital letter :");
          String passWord = scanner.nextLine();
-         this.setPassword(password);
+         this.setPassword(passWord);
     }
     
     } 
-   // public void RegisterData(){
-     //   System.out.println(this.getName());
-     //   System.out.println(this.getEmail());
-     //   System.out.println(this.getPassword());
+    //method created to display customer data after registration
+    public void RegisterData(){
+       System.out.println("---------CustomerData---");
+       System.out.println(getName());
+       System.out.println(getEmail());
+       System.out.println(getPassword());
               
-  //  }
+   }
 }
 

@@ -37,8 +37,8 @@ public class MovieRentalApp {
         System.out.println(print);
         
          Registration user = new Registration();
-         user.printSet();
-        // user.RegisterData();
+         user.printSet();// method called to set customer data
+         user.RegisterData();// method called to display customer data after registration
          
 
 //        //The filePath variable stores the Movie_Metadata.csv file. The csv file is inside this project folder.

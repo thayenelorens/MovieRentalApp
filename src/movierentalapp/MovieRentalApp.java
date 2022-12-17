@@ -23,6 +23,7 @@ public class MovieRentalApp {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     
     //IOException is thrown in case there's an error when reading each line.
@@ -34,6 +35,11 @@ public class MovieRentalApp {
          */
         String print = reader("Movie_Metadata.csv");
         System.out.println(print);
+        
+         Registration user = new Registration();
+         user.printSet();
+        // user.RegisterData();
+         
 
 //        //The filePath variable stores the Movie_Metadata.csv file. The csv file is inside this project folder.
 //        String filePath = "Movie_Metadata.csv";

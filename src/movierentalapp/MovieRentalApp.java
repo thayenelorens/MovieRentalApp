@@ -9,8 +9,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
-
+import java.sql.SQLException;
 
 /**
  * Group Members:
@@ -25,17 +24,18 @@ public class MovieRentalApp {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-    
     //IOException is thrown in case there's an error when reading each line.
-    public static void main(String[] args) throws IOException {
-        
-       
-        
-         Registration user = new Registration();
-         user.printSet();// method called to set customer data
-         user.RegisterData();// method called to display customer data after registration
-         
+    public static void main(String[] args) throws IOException, SQLException {
 
+//        Registration user = new Registration();
+//        user.printSet();// method called to set customer data
+//        user.RegisterData();// method called to display customer data after registration
+
+        //Creating an 's' object based on the Selection class.
+        Selection s = new Selection();
+
+        //Calling filmChoice method from the selection class.
+        s.filmChoice();
 
         System.out.println("Mayara, testing!");
     }

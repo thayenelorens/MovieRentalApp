@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import static movierentalapp.FileReader.reader;
+
 
 
 /**
@@ -29,44 +29,14 @@ public class MovieRentalApp {
     //IOException is thrown in case there's an error when reading each line.
     public static void main(String[] args) throws IOException {
         
-        /**
-         * Calling method from FileReader class.
-         * @Thayene Lorens
-         */
-        String print = reader("Movie_Metadata.csv");
-        System.out.println(print);
+       
         
          Registration user = new Registration();
          user.printSet();// method called to set customer data
          user.RegisterData();// method called to display customer data after registration
          
 
-//        //The filePath variable stores the Movie_Metadata.csv file. The csv file is inside this project folder.
-//        String filePath = "Movie_Metadata.csv";
-//        //The sentece variable is initially set with an empty value.
-//        String sentence = "";
-//
-//        //Surrounding BufferedReader with "try and catch".
-//        try {
-//            //Using BufferedReader to read from the Movie_Metadata.csv file. 
-//            BufferedReader movieFile = new BufferedReader(new FileReader(filePath));
-//
-//            /*Using while loop to read from the file.
-//             The loop is going to read a sentence and store it into the "sentence" variable created above.
-//             While the next sentence is not equals to null, the loop will keep going.*/
-//            while ((sentence = movieFile.readLine()) != null) {
-//                                
-//                //Creating a String array "index" that splits the lines separating them by commas.
-//                String[] index = sentence.split(",");
-//                
-//                //Printing only the Original Title of each movie, located into index position number 1.
-//                System.out.println("Title: " + index[1]);
-//            }
-//            //Catch statement in case the Movie_Metadata file is not found.
-//        } catch (FileNotFoundException ex) {
-//             System.out.println("ERROR - Unable to find file " + "'" + filePath + "'");
-//
-//        }
+
         System.out.println("Mayara, testing!");
     }
 

@@ -34,7 +34,7 @@ public class selectMovie {
 
             //Using scanner to generate input by the user.
             Scanner input = new Scanner(System.in);
-            System.out.println("Delete RentalMovie option selected");
+            System.out.println("Select a movie by ID option:");
             System.out.println("Type movie ID");
 
             int id = input.nextInt();

@@ -37,7 +37,6 @@ public class MovieRentalApp {
         //Calling filmChoice method from the selection class.
         s.filmChoice();
 
-        System.out.println("Mayara, testing!");
     }
 
 }

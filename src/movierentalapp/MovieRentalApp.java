@@ -67,6 +67,7 @@ public class MovieRentalApp {
 //             System.out.println("ERROR - Unable to find file " + "'" + filePath + "'");
 //
 //        }
+        System.out.println("Mayara, testing!");
     }
 
 }

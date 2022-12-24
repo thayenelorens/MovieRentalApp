@@ -5,6 +5,9 @@
 package movierentalapp;
 
 //Importing libraries.
+import Manager.Admin;
+import Manager.DisplayData;
+import Manager.addUser;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,6 +41,12 @@ public class Selection {
 
         //Calling the printMenu method.
         selection.printMenu();
+        
+        Admin adm = new Admin();
+        //Register as user method
+        addUser use = new addUser();
+        //Display use data method
+        DisplayData data = new DisplayData();
         try {
             //Using bufferedReader here to get user's input.
             BufferedReader myKB = new BufferedReader(new InputStreamReader(System.in));
@@ -51,7 +60,7 @@ public class Selection {
             //Problem: If user input is not an integer, the program only prompts the catch message and does not restart the loop.
             do {
 
-                System.out.println("Please, type a number from 1 to 7 for your choice: ");
+                System.out.println("Please, type a number from 1 to 10 for your choice: ");
 
                 //This variable stores user's input.
                 int menuChoice = Integer.parseInt(myKB.readLine());
@@ -85,8 +94,26 @@ public class Selection {
                     case 6:
                         selectMovie();
                         break;
-
                     case 7:
+                        // Signup as admin
+                        adm.authenticityUser();
+                        System.out.println("Your are Login sucessefully ");
+                        break;
+                    case 8:
+                        //Signup as as new user
+                        use.userAdd();
+                        System.out.println("Your registration was successful.");
+                        // show a table  after register
+                        data.Manager();
+                        System.out.println("You are in the system !");
+                        break;
+                    case 9: 
+                        adm.deleteUser();//Delete user
+                        System.out.println("Your have deleted  user!");
+                        data.Manager();
+                        System.out.println("User was deleted from system!");
+                        break;    
+                    case 10:
                         //calling farewell method.
                         selection.fareWell();
                         quit = true;
@@ -94,11 +121,11 @@ public class Selection {
                         break;
 
                     default:
-                        System.out.println("Numbers have to be from 1 to 7 only!");
+                        System.out.println("Numbers have to be from 1 to 10 only!");
 
                 }
             } while (quit == false);
-        } catch (Exception e) {
+        } catch (IOException | NumberFormatException | SQLException e) {
 
             //If input is not a number, error messages pops up.
             System.out.println("Error! Please, choose numbers only!"); //if user types letters instead of numbers for the choice, the program will catch this message and output it.

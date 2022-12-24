@@ -58,7 +58,6 @@ public class deleteMovie {
                           
          }
         } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 }

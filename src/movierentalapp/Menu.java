@@ -36,7 +36,10 @@ public class Menu {
         System.out.printf("%-25s%s\n", "Rent a Movie", "4");
         System.out.printf("%-25s%s\n", "Top 5 Movies rented", "5");
         System.out.printf("%-25s%s\n", "Select a Movie", "6");
-        System.out.printf("%-25s%s\n", "Exit Program", "7");
+        System.out.printf("%-25s%s\n", "Login as Admin", "7");
+        System.out.printf("%-25s%s\n", "Register as User", "8");
+        System.out.printf("%-25s%s\n", "Delete user", "9");
+        System.out.printf("%-25s%s\n", "Exit Program", "10");
         System.out.println();
 
     }

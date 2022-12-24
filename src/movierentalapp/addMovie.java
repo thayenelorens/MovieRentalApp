@@ -57,7 +57,6 @@ public class addMovie {
             );
                         
         } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 }

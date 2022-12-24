@@ -5,9 +5,10 @@
 package movierentalapp;
 
 //importing necessary libraries for this class to run properly.
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+//import java.io.BufferedReader;
+//import java.io.FileNotFoundException;
+//import java.io.FileReader;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -23,6 +24,7 @@ public class MovieRentalApp {
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
+     * @throws java.sql.SQLException
      */
     //IOException is thrown in case there's an error when reading each line.
     public static void main(String[] args) throws IOException, SQLException {
@@ -31,11 +33,14 @@ public class MovieRentalApp {
 //        user.printSet();// method called to set customer data
 //        user.RegisterData();// method called to display customer data after registration
 
+         
         //Creating an 's' object based on the Selection class.
         Selection s = new Selection();
-
+        
         //Calling filmChoice method from the selection class.
         s.filmChoice();
+        
+        
 
     }
 
